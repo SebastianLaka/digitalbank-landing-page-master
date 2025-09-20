@@ -2,7 +2,9 @@
 </script>
 
 <template>
+    <p>hello</p>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
 </style>
