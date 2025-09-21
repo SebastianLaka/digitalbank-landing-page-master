@@ -11,10 +11,16 @@ const props = defineProps({
   </button>
 </template>
 <style scoped lang="scss">
-@use '@/assets/sass/reset' as *;
-.nav-button{
+@media (min-width: 320px) {
+  .nav-button {
     background-color: transparent;
     border: none;
-    padding: .5em;
+    padding: 0.5em;
+  }
+}
+@media (min-width: 992px){
+    .nav-button{
+        display: none;
+    }
 }
 </style>

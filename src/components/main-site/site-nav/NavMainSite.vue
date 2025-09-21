@@ -1,6 +1,7 @@
 <script setup>
 import NavLogo from './NavLogo.vue'
 import NavToggleIcon from './NavToggleIcon.vue'
+import NavBarsMain from './nav-bars/NavBarsMain.vue'
 import Logo from '@/components/icons/logo-dark.svg'
 import hamburgerIcon from '@/components/icons/icon-hamburger.svg'
 import closeMenuIcon from '@/components/icons/icon-close.svg'
@@ -19,6 +20,7 @@ const navIcons = {
     <div class="nav-container wrapper">
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
       <NavToggleIcon :src="navIcons.hamburgerIcon" :alt="navIcons.alt" />
+      <NavBarsMain></NavBarsMain>
     </div>
   </nav>
 </template>
@@ -36,6 +38,7 @@ const navIcons = {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
   }
 }

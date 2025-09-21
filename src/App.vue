@@ -10,4 +10,7 @@ import MainComponent from './components/main-site/MainComponent.vue';
 @use '@/assets/sass/fonts' as *;
 @use '@/assets/sass/colors' as *;
 @use '@/assets/sass/wrapper' as *;
+body{
+  font-family: "Public Sans", sans-serif;
+}
 </style>
