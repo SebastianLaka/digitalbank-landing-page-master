@@ -42,7 +42,19 @@ const navIcons = {
       justify-content: space-between;
       align-items: center;
       position: relative;
+      .request-button{
+        display: none;
+      }
     }
   }
+}
+@media (min-width: 992px){
+    .nav-site{
+        .nav-container{
+            .request-button{
+                display: block;
+            }
+        }
+    }
 }
 </style>
