@@ -6,7 +6,9 @@ import RequestButton from '../RequestButton.vue'
 import Logo from '@/components/icons/logo-dark.svg'
 import hamburgerIcon from '@/components/icons/icon-hamburger.svg'
 import closeMenuIcon from '@/components/icons/icon-close.svg'
-
+import { useCounterStore } from '@/stores/counter'
+const store = useCounterStore()
+console.log(store);
 const logoAttrs = {
   logo: Logo,
   alt: 'Digitalbank logo',
@@ -21,7 +23,7 @@ const navIcons = {
   <nav class="nav-site">
     <div class="nav-container wrapper">
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
-      <NavToggleIcon :src="navIcons.hamburgerIcon" :alt="navIcons.alt" />
+      <NavToggleIcon :src="store.navIcon ? navIcons.hamburgerIcon : navIcons.closeIcon" :alt="navIcons.alt" @click="store.toggleMobileIcon" />
       <NavBarsMain/>
       <RequestButton>Request Invite</RequestButton>
     </div>
@@ -42,19 +44,8 @@ const navIcons = {
       justify-content: space-between;
       align-items: center;
       position: relative;
-      .request-button{
-        display: none;
-      }
     }
   }
 }
-@media (min-width: 992px){
-    .nav-site{
-        .nav-container{
-            .request-button{
-                display: block;
-            }
-        }
-    }
-}
+
 </style>
