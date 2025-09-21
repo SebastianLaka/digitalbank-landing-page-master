@@ -2,9 +2,11 @@
 import NavLogo from './NavLogo.vue'
 import NavToggleIcon from './NavToggleIcon.vue'
 import NavBarsMain from './nav-bars/NavBarsMain.vue'
+import RequestButton from '../RequestButton.vue'
 import Logo from '@/components/icons/logo-dark.svg'
 import hamburgerIcon from '@/components/icons/icon-hamburger.svg'
 import closeMenuIcon from '@/components/icons/icon-close.svg'
+
 const logoAttrs = {
   logo: Logo,
   alt: 'Digitalbank logo',
@@ -20,7 +22,8 @@ const navIcons = {
     <div class="nav-container wrapper">
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
       <NavToggleIcon :src="navIcons.hamburgerIcon" :alt="navIcons.alt" />
-      <NavBarsMain></NavBarsMain>
+      <NavBarsMain/>
+      <RequestButton>Request Invite</RequestButton>
     </div>
   </nav>
 </template>

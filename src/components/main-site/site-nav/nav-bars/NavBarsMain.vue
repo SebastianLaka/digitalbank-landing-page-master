@@ -37,7 +37,7 @@ const navItems = [
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
+    top: 1000px;
     left: 0;
     right: 0;
     width: 100%;
