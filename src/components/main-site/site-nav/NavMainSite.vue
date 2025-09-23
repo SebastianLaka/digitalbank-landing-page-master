@@ -48,7 +48,6 @@ onMounted(() => {
     left: 0;
     right: 0;
     padding: 1em;
-    border-bottom: 0.1em solid $gray-600;
     .nav-container {
       display: flex;
       justify-content: space-between;
