@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted } from 'vue'
 import NavLogo from './NavLogo.vue'
 import NavToggleIcon from './NavToggleIcon.vue'
 import NavBarsMain from './nav-bars/NavBarsMain.vue'
@@ -7,8 +8,9 @@ import Logo from '@/components/icons/logo-dark.svg'
 import hamburgerIcon from '@/components/icons/icon-hamburger.svg'
 import closeMenuIcon from '@/components/icons/icon-close.svg'
 import { useCounterStore } from '@/stores/counter'
+
 const store = useCounterStore()
-console.log(store);
+
 const logoAttrs = {
   logo: Logo,
   alt: 'Digitalbank logo',
@@ -18,6 +20,14 @@ const navIcons = {
   closeIcon: closeMenuIcon,
   alt: 'Navigation icons which let for interaction',
 }
+const handleResize = () => {
+  store.windowWidth = window.innerWidth;
+};
+onMounted(() => {
+   window.addEventListener('resize', handleResize)
+})
+
+
 </script>
 <template>
   <nav class="nav-site">
@@ -25,7 +35,7 @@ const navIcons = {
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
       <NavToggleIcon :src="store.navIcon ? navIcons.hamburgerIcon : navIcons.closeIcon" :alt="navIcons.alt" @click="store.toggleMobileIcon" />
       <NavBarsMain/>
-      <RequestButton>Request Invite</RequestButton>
+      <RequestButton v-if="!store.isMobileWidth">Request Invite</RequestButton>
     </div>
   </nav>
 </template>
