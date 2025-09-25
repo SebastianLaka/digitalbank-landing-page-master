@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import NavLogo from './NavLogo.vue'
 import NavToggleIcon from './NavToggleIcon.vue'
 import NavBarsMain from './nav-bars/NavBarsMain.vue'
@@ -21,20 +21,26 @@ const navIcons = {
   alt: 'Navigation icons which let for interaction',
 }
 const handleResize = () => {
-  store.windowWidth = window.innerWidth;
-};
+  store.windowWidth = window.innerWidth
+}
 onMounted(() => {
-   window.addEventListener('resize', handleResize)
+  store.toggleMobileNavMenu()
+  window.addEventListener('resize', handleResize)
 })
-
-
+onUnmounted(()=>{
+  store.toggleMobileNavMenu()
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 <template>
   <nav class="nav-site">
     <div class="nav-container wrapper">
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
-      <NavToggleIcon :src="store.navIcon ? navIcons.hamburgerIcon : navIcons.closeIcon" :alt="navIcons.alt" @click="store.toggleMobileIcon" />
       <NavBarsMain/>
+      <NavToggleIcon
+        :src="store.navIcon ? navIcons.hamburgerIcon : navIcons.closeIcon"
+        :alt="navIcons.alt"
+        @click="store.toggleMobileNavMenu"/>
       <RequestButton v-if="!store.isMobileWidth">Request Invite</RequestButton>
     </div>
   </nav>
@@ -53,8 +59,15 @@ onMounted(() => {
       justify-content: space-between;
       align-items: center;
       position: relative;
+      .slide-from-top-enter-active,
+      .slide-from-top-leave-active {
+        transition: transform 0.3s ease-in-out;
+      }
+      .slide-from-top-enter-from,
+      .slide-from-top-leave-to {
+        transform: translateX(-200px);
+      }
     }
   }
 }
-
 </style>
