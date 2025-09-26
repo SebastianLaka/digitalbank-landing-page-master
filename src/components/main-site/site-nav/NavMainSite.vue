@@ -27,7 +27,7 @@ onMounted(() => {
   store.toggleMobileNavMenu()
   window.addEventListener('resize', handleResize)
 })
-onUnmounted(()=>{
+onUnmounted(() => {
   store.toggleMobileNavMenu()
   window.removeEventListener('resize', handleResize)
 })
@@ -36,11 +36,12 @@ onUnmounted(()=>{
   <nav class="nav-site">
     <div class="nav-container wrapper">
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
-      <NavBarsMain/>
-      <NavToggleIcon
-        :src="store.navIcon ? navIcons.hamburgerIcon : navIcons.closeIcon"
-        :alt="navIcons.alt"
-        @click="store.toggleMobileNavMenu"/>
+      <NavBarsMain />
+        <NavToggleIcon
+          :src="store.navIcon ? navIcons.hamburgerIcon : navIcons.closeIcon"
+          :alt="navIcons.alt"
+          @click="store.toggleMobileNavMenu"
+        />
       <RequestButton v-if="!store.isMobileWidth">Request Invite</RequestButton>
     </div>
   </nav>
@@ -53,20 +54,12 @@ onUnmounted(()=>{
     top: 0;
     left: 0;
     right: 0;
-    padding: 1em;
     .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: relative;
-      .slide-from-top-enter-active,
-      .slide-from-top-leave-active {
-        transition: transform 0.3s ease-in-out;
-      }
-      .slide-from-top-enter-from,
-      .slide-from-top-leave-to {
-        transform: translateX(-200px);
-      }
+      padding: 1em;
     }
   }
 }

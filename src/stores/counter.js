@@ -1,8 +1,8 @@
-import { ref, computed } from 'vue'
+import { ref, computed, reactive } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useCounterStore = defineStore('counter', () => {
-  const navIcon = ref(true)
+  const navIcon = ref(false)
   const navButton = ref(true)
   const mobileNav = ref(false)
   const windowWidth = ref(window.innerWidth)

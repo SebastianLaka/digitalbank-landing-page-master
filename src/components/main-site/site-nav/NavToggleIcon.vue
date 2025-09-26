@@ -6,6 +6,7 @@ const props = defineProps({
 })
 </script>
 <template>
+  
   <button class="nav-button">
     <img :src="props.src" :alt="props.alt" :isToggle="props.isToggle" class="nav-icon" />
   </button>
