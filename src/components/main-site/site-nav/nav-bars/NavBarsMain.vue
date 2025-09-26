@@ -33,7 +33,7 @@ const navItems = [
 <template>
   <Transition name="slide-from-top">
     <div class="nav-bars-mobile-container" v-if="!store.mobileNav && store.isMobileWidth">
-      <ul class="nav-bars-mobile" v-if="!store.mobileNav && store.isMobileWidth">
+      <ul class="nav-bars-mobile">
         <NavBarsItems v-for="navItem in navItems" :key="navItem.id" :item="navItem.item" />
       </ul>
     </div>
