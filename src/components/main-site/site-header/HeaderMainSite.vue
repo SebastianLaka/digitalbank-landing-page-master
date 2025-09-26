@@ -1,6 +1,8 @@
 <script setup>
 import HeaderContent from './HeaderContent.vue'
+import HeaderImage from './HeaderImage.vue'
 import RequestButton from '../RequestButton.vue'
+import ImageMockups from '@/assets/images/image-mockups.png'
 const headerContentData = [
   {
     id: 1,
@@ -8,12 +10,19 @@ const headerContentData = [
   },
   {
     id: 2,
-    content: 'Take your financial life online. Your Digitalbank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.'
-  }
+    content:
+      'Take your financial life online. Your Digitalbank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.',
+  },
 ]
 </script>
 <template>
-  <HeaderContent v-for="headerContent in headerContentData" :key="headerContent.id" :header="headerContent.header" :content="headerContent.content"/>
+  <HeaderImage :src="ImageMockups" />
+  <HeaderContent
+    v-for="headerContent in headerContentData"
+    :key="headerContent.id"
+    :header="headerContent.header"
+    :content="headerContent.content"
+  />
   <RequestButton>Request Invite</RequestButton>
 </template>
 <style scoped lang="scss"></style>
