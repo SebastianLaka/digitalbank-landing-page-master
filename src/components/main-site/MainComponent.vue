@@ -7,4 +7,5 @@ import HeaderMainSite from './site-header/HeaderMainSite.vue';
     <HeaderMainSite/>
 </template>
 <style scoped lang="scss">
+
 </style>

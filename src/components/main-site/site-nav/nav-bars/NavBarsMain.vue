@@ -89,7 +89,7 @@ const navItems = [
 @media (min-width: 992px) {
   .nav-bars-desktop {
     display: flex;
-    gap: 0 2em;
+    gap: 0 3em;
   }
 }
 </style>

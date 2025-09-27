@@ -12,13 +12,13 @@ const props = defineProps({
 @use '@/assets/sass/colors' as *;
 @media (min-width: 320px){
   .nav-item {
-    padding: 0.5em;
     position: relative;
     color: $blue-950;
   }
 }
 @media (min-width: 992px) {
   .nav-item {
+    color: $gray-600;
     &::before {
       position: absolute;
       content: '';

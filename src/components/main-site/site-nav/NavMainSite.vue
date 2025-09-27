@@ -34,7 +34,7 @@ onUnmounted(() => {
 </script>
 <template>
   <nav class="nav-site">
-    <div class="nav-container wrapper">
+    <div class="nav-container">
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
       <NavBarsMain />
         <NavToggleIcon
@@ -54,12 +54,24 @@ onUnmounted(() => {
     top: 0;
     left: 0;
     right: 0;
+    background-color: $white;
+    z-index: 500;
     .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: relative;
-      padding: 1em;
+      padding: 2em 0;
+    }
+  }
+}
+@media (min-width: 992px){
+  .nav-site{
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 0 1em;
+    .nav-container{
+      grid-column: 3/14;
     }
   }
 }
