@@ -12,7 +12,6 @@ const props = defineProps({
 <style scoped lang="scss">
 @media (min-width: 320px) {
   .header-site-background {
-    position: relative;
     .image {
       position: relative;
       width: 100%;
@@ -23,10 +22,8 @@ const props = defineProps({
 @media (min-width: 992px) {
   .header-site-background {
     .image {
-
-      transform: translateY(-100px);
       left: 15%;
-      height: auto;
+      top: 1em;
     }
   }
 }

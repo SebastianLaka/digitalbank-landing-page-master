@@ -33,26 +33,21 @@ const headerContentData = [
     align-items: center;
     flex-direction: column;
     gap: 2em 0;
-    min-height: 100svh;
+    height: 100svh;
   }
 }
 @media (min-width: 992px) {
   .header-main {
     display: grid;
     grid-template-columns: repeat(14, 1fr);
-    grid-template-rows: 1fr;
+    align-items: center;
+    align-content: center;
     position: relative;
     .header-image-content {
       grid-column: 8/15;
-      // position: absolute;
-      // top: 1em;
-      // min-height: 100svh;
-      // left: .25em;
       min-width: 100%;
       z-index: 1;
-      
     }
-
     .request-button {
       grid-column: 1/2;
     }
