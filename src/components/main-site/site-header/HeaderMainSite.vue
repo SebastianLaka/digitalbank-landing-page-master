@@ -14,7 +14,9 @@ const headerContentData = [
 </script>
 <template>
   <header class="header-main">
-    <HeaderImage />
+    <div class="header-image-content">
+      <HeaderImage :src="ImageMockups" />
+    </div>
     <HeaderContent
       v-for="headerContent in headerContentData"
       :key="headerContent.id"
@@ -39,9 +41,18 @@ const headerContentData = [
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: 1fr;
-
     position: relative;
-    gap: 0 5em;
+    .header-image-content {
+      grid-column: 8/15;
+      // position: absolute;
+      // top: 1em;
+      // min-height: 100svh;
+      // left: .25em;
+      min-width: 100%;
+      z-index: 1;
+      
+    }
+
     .request-button {
       grid-column: 1/2;
     }

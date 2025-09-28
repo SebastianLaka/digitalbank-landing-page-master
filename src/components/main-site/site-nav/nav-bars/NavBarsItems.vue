@@ -14,6 +14,7 @@ const props = defineProps({
   .nav-item {
     position: relative;
     color: $blue-950;
+    padding: 0 0 1em 0;
   }
 }
 @media (min-width: 992px) {

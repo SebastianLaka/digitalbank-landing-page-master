@@ -39,11 +39,11 @@ const props = defineProps({
     grid-column: 3/8;
     grid-row: 1/2;
     align-items: start;
-    padding: 0;
+    padding: 0 1em 0 0;
     &__header,
     &__description{
       text-align: left;
-      font-size: 2.75rem;
+      font-size: 2.25rem;
       line-height: 150%;
     }
     &__description{

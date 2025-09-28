@@ -12,5 +12,6 @@ import MainComponent from './components/main-site/MainComponent.vue';
 @use '@/assets/sass/wrapper' as *;
 body{
   font-family: "Public Sans", sans-serif;
+  overflow: hidden;
 }
 </style>

@@ -6,27 +6,28 @@ const props = defineProps({
 </script>
 <template>
   <div class="header-site-background">
+    <img :src="props.src" :alt="props.alt" class="image" />
   </div>
 </template>
 <style scoped lang="scss">
 @media (min-width: 320px) {
   .header-site-background {
-    background-size: contain;
-    background-image: url("@/assets/images/image-mockups.png");
-    background-repeat: no-repeat;
-    background-position: center center;
     position: relative;
-    min-height: 100svh;
-    width: 100%;
+    .image {
+      position: relative;
+      width: 100%;
+      object-fit: contain;
+    }
   }
 }
 @media (min-width: 992px) {
   .header-site-background {
-    background-size: cover;
-    grid-column: 8/15;
-    background-position: 150px -100px;
-    min-height: 100svh;
-    min-width: 20%;
+    .image {
+
+      transform: translateY(-100px);
+      left: 15%;
+      height: auto;
+    }
   }
 }
 </style>
