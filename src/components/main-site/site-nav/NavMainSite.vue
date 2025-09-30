@@ -37,11 +37,11 @@ onUnmounted(() => {
     <div class="nav-container">
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
       <NavBarsMain />
-        <NavToggleIcon
-          :src="store.navIcon ? navIcons.hamburgerIcon : navIcons.closeIcon"
-          :alt="navIcons.alt"
-          @click="store.toggleMobileNavMenu"
-        />
+      <NavToggleIcon
+        :src="store.navIcon ? navIcons.hamburgerIcon : navIcons.closeIcon"
+        :alt="navIcons.alt"
+        @click="store.toggleMobileNavMenu"
+      />
       <RequestButton v-if="!store.isMobileWidth">Request Invite</RequestButton>
     </div>
   </nav>
@@ -61,17 +61,32 @@ onUnmounted(() => {
       justify-content: space-between;
       align-items: center;
       position: relative;
-      padding: 2em 0;
+      padding: 2em 1em;
     }
   }
 }
-@media (min-width: 992px){
-  .nav-site{
+@media (min-width: 992px) {
+  .nav-site {
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     gap: 0 1em;
-    .nav-container{
-      grid-column: 3/14;
+    .nav-container {
+      grid-column: 1/15;
+      padding: 1.5em 1em;
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .nav-site {
+    .nav-container {
+      grid-column: 2/14;
+    }
+  }
+}
+@media (min-width: 1250px) {
+  .nav-site {
+    .nav-container {
+      grid-column: 3/13;
     }
   }
 }

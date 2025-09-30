@@ -36,19 +36,35 @@ const props = defineProps({
 }
 @media (min-width: 992px) {
   .header-content {
-    grid-column: 3/8;
+    grid-column: 1/8;
     grid-row: 1/2;
     align-items: start;
-    padding: 0 1em 0 0;
+    padding: 0 1em 0 1em;
     &__header,
     &__description{
       text-align: left;
-      font-size: 2.25rem;
+      font-size: 3.125rem;
       line-height: 150%;
+      
     }
     &__description{
       font-size: $primary-size;
     }
+  }
+}
+@media (min-width: 1100px){
+  .header-content{
+    grid-column: 2/8;
+  }
+}
+@media (min-width: 1250px){
+  .header-content{
+    grid-column: 3/8;
+  }
+}
+@media (min-width: 1440px){
+  .header-content{
+    grid-column: 3/7;
   }
 }
 </style>

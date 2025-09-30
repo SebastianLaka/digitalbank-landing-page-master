@@ -5,22 +5,28 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="header-background-intro">
-    <img :src="props.src" :alt="props.alt" class="header-background-intro__image" />
-  </div>
+  <img :src="props.src" :alt="props.alt" class="header-background-intro-image" />
 </template>
 <style scoped lang="scss">
 @media (min-width: 320px) {
-  .header-background-intro {
-    &__image {
-      display: block;
-      width: 100%;
-      position: absolute;
-      inset: 4em 0 0 0;
-     
-      max-height: 100%;
-      z-index: -1;
-    }
+  .header-background-intro-image {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-height: 100%;
+    z-index: -1;
+  }
+}
+@media (min-width: 992px) {
+  .header-background-intro-image {
+    top: -7em;
+    left: -2em;
+    width: 150%;
+    object-fit: contain;
   }
 }
 </style>
