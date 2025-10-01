@@ -45,7 +45,7 @@ const headerContentData = [
     grid-template-columns: repeat(14, 1fr);
     align-items: center;
     align-content: center;
-    gap: 0 1em;
+    
     .header-image-content {
       grid-column: 8/15;
       z-index: 1;
@@ -54,6 +54,7 @@ const headerContentData = [
     .request-button {
       grid-column: 1/2;
     }
+    padding-bottom: 1em;
   }
 }
 </style>

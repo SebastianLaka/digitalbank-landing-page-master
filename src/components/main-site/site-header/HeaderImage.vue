@@ -29,9 +29,28 @@ const props = defineProps({
   .header-site-background {
     &__image {
       position: relative;
-      min-width: 80%;
-      top: -1em;
+      min-width: 120%;
+      top: 0;
+      right: -2em;
+      
+    }
+  }
+}
+@media (min-width: 1100px){
+  .header-site-background {
+    &__image {
+      min-width: 110%;
+      top: -3em;
       right: -6em;
+    }
+  }
+}
+@media (min-width: 1250px){
+.header-site-background {
+    &__image {
+      min-width: 100%;
+     top: 0;
+     right: -9em;
     }
   }
 }
