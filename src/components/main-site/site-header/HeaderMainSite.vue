@@ -33,7 +33,7 @@ const headerContentData = [
     align-items: center;
     flex-direction: column;
     gap: 2em 0;
-    height: 100svh;
+    min-height: 100svh;
     .header-image-content{
       width: 100%;
     }
@@ -45,7 +45,7 @@ const headerContentData = [
     grid-template-columns: repeat(14, 1fr);
     align-items: center;
     align-content: center;
-    
+    overflow-x: hidden; 
     .header-image-content {
       grid-column: 8/15;
       z-index: 1;
