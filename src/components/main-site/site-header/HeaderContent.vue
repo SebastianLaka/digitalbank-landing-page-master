@@ -34,12 +34,19 @@ const props = defineProps({
     }
   }
 }
+@media (min-width: 768px){
+  .header-content{
+    &__header{
+      font-size: 2.5rem;
+    }
+  }
+}
 @media (min-width: 992px) {
   .header-content {
     grid-column: 1/8;
     grid-row: 1/2;
     align-items: start;
-    padding: 0 1em 0 1em;
+    padding: 0 1em;
     &__header,
     &__description{
       text-align: left;

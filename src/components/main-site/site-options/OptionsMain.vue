@@ -1,10 +1,10 @@
 <script setup>
 import OptionsHeader from './OptionsHeader.vue'
 import OptionsCard from './OptionsCard.vue'
-import iconOnline from "@/components/icons/icon-online.svg";
-import iconBudgeting from "@/components/icons/icon-budgeting.svg";
-import iconOnboarding from "@/components/icons/icon-onboarding.svg"
-import iconApi from "@/components/icons/icon-api.svg";
+import iconOnline from '@/components/icons/icon-online.svg'
+import iconBudgeting from '@/components/icons/icon-budgeting.svg'
+import iconOnboarding from '@/components/icons/icon-onboarding.svg'
+import iconApi from '@/components/icons/icon-api.svg'
 const cardsHeaderContent = [
   {
     id: 1,
@@ -20,29 +20,32 @@ const cardsContent = [
     alt: 'Online banking card to easy manage your moenys',
     header: 'Online Banking',
     description:
-    'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world',
+      'Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world',
   },
   {
     id: 2,
     src: iconBudgeting,
     alt: 'You can easy see where your moneys goes, get notifications, limits etc.',
     header: 'Simple Budgeting',
-    description: 'See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.'
+    description:
+      'See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.',
   },
   {
     id: 3,
     src: iconOnboarding,
     alt: 'Opean easy accound and take control about your finances',
     header: 'Fast Onboarding',
-    description: 'We don’t do branches. Open your account in minutes online and start taking control of your finances right away.'
+    description:
+      'We don’t do branches. Open your account in minutes online and start taking control of your finances right away.',
   },
   {
     id: 3,
     src: iconApi,
     alt: 'Manage your all finanses like investments, pension and much more',
     header: 'Open API',
-    description: 'Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.'
-  }
+    description:
+      'Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.',
+  },
 ]
 </script>
 <template>
@@ -64,12 +67,21 @@ const cardsContent = [
   </section>
 </template>
 <style scoped lang="scss">
-@media (min-width: 320px){
-    .cards-main{
-        display: flex;
-        flex-direction: column;
-        gap: 1.75em 0;
-        padding: 0 .5em;
-    }
+@media (min-width: 320px) {
+  .cards-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75em 0;
+    padding: 0 1em;
+  }
+}
+@media (min-width: 768px) {
+  .cards-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    gap: 2em 4em;
+  }
 }
 </style>

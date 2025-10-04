@@ -24,7 +24,6 @@ const props = defineProps({
     align-items: center;
     flex-direction: column;
     gap: 1.75em 0;
-  
     &__header {
       color: $blue-950;
       font-weight: $weight-300;
@@ -34,6 +33,12 @@ const props = defineProps({
       font-size: $primary-size;
       text-align: center;
     }
+  }
+}
+@media (min-width: 768px){
+  .card-content{
+    min-width: 90%;
+    justify-self: center;
   }
 }
 </style>

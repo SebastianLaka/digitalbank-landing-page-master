@@ -19,9 +19,12 @@ const props = defineProps({
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1.75em 0;
+    padding-top: 5em;
     &__header {
       color: $blue-950;
       font-weight: $weight-300;
+      text-align: center;
     }
     &__description {
       color: $gray-600;
@@ -30,10 +33,19 @@ const props = defineProps({
     }
   }
 }
+@media (min-width: 768px){
+  .card-header-content{
+    grid-column: 1/3;
+    &__header{
+      font-size: 2.5rem;
+    }
+  }
+}
 @media (min-width: 992px) {
   .card-header-content {
     justify-content: start;
     align-items: start;
+    padding: 0 1em;
     &__header {
       font-size: 3.125rem;
     }
