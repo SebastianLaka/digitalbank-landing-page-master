@@ -44,28 +44,25 @@ const props = defineProps({
 @media (min-width: 992px) {
   .card-header-content {
     align-items: start;
-    grid-column: 1 / span 8;
+    grid-column: 1 / 11;
     grid-row: 1/2;
     padding: 0;
     &__header {
       font-size: 2.5rem;
-      text-align: left;
     }
     &__description {
       text-align: left;
-      
-      line-height: 150%;
     }
   }
 }
 @media (min-width: 1100px) {
   .card-header-content {
-    grid-column: 2/9;
+    grid-column: 2/11;
   }
 }
 @media (min-width: 1250px) {
   .card-header-content {
-    grid-column: 3/9;
+    grid-column: 3/10;
   }
 }
 </style>

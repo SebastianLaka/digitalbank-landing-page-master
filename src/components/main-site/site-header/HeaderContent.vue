@@ -15,6 +15,8 @@ const props = defineProps({
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;
 @use '@/assets/sass/fonts' as *;
+@use '@/assets/sass/reset' as *;
+
 @media (min-width: 320px) {
   .header-content {
     display: flex;
@@ -30,7 +32,6 @@ const props = defineProps({
     }
     &__description {
       color: $gray-600;
-      line-height: 150%;
     }
   }
 }
@@ -51,7 +52,6 @@ const props = defineProps({
     &__description {
       text-align: left;
       font-size: 3.125rem;
-      line-height: 150%;
     }
     &__description {
       font-size: $primary-size;

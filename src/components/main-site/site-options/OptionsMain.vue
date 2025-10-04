@@ -7,7 +7,6 @@ import iconOnboarding from '@/components/icons/icon-onboarding.svg'
 import iconApi from '@/components/icons/icon-api.svg'
 const cardsHeaderContent = [
   {
-    id: 1,
     header: 'Why choose Digitalbank?',
     description:
       'We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.',
@@ -51,10 +50,8 @@ const cardsContent = [
 <template>
   <section class="cards-main">
     <OptionsHeader
-      v-for="cardContent in cardsHeaderContent"
-      :key="cardContent.id"
-      :header="cardContent.header"
-      :description="cardContent.description"
+      :header="cardsHeaderContent[0].header"
+      :description="cardsHeaderContent[0].description"
     />
     <OptionsCard
       v-for="cardContent in cardsContent"

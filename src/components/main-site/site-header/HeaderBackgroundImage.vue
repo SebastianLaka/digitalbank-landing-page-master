@@ -8,6 +8,7 @@ const props = defineProps({
   <img :src="props.src" :alt="props.alt" class="header-background-intro-image" />
 </template>
 <style scoped lang="scss">
+@use '@/assets/sass/reset' as *;
 @media (min-width: 320px) {
   .header-background-intro-image {
     display: block;
@@ -27,7 +28,6 @@ const props = defineProps({
     left: -2em;
     min-width: 150%;
     object-fit: contain;
-
   }
 }
 </style>

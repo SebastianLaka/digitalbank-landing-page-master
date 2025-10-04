@@ -22,7 +22,6 @@ const props = defineProps({
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     gap: 1.75em 0;
     &__header {
       color: $blue-950;
@@ -30,9 +29,7 @@ const props = defineProps({
     }
     &__description {
       color: $gray-600;
-      font-size: $primary-size;
       text-align: center;
-      line-height: 150%;
     }
   }
 }
@@ -43,7 +40,6 @@ const props = defineProps({
 }
 @media (min-width: 992px) {
   .card-content {
-    
     align-items: start;
     grid-row: 2/ -1;
     &__description {

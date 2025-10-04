@@ -32,7 +32,6 @@ const headerContentData = [
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
     height: 100%;
     .header-image-content {
       width: 100%;
