@@ -78,15 +78,25 @@ onUnmounted(() => {
 }
 @media (min-width: 1100px) {
   .nav-site {
+    gap: 0;
     .nav-container {
       grid-column: 2/14;
+      padding: 1.5em 0;
     }
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: 1250px){
+  .nav-site{
+    grid-template-columns: repeat(16, 1fr);
+    .nav-container{
+      grid-column: 3/15;
+    }
+  }
+}
+@media (min-width: 1440px) {
   .nav-site {
     .nav-container {
-      grid-column: 3/13;
+      grid-column: 3/15;
     }
   }
 }

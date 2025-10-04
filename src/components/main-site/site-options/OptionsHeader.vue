@@ -33,22 +33,39 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 768px){
-  .card-header-content{
+@media (min-width: 768px) {
+  .card-header-content {
     grid-column: 1/3;
-    &__header{
+    &__header {
       font-size: 2.5rem;
     }
   }
 }
 @media (min-width: 992px) {
   .card-header-content {
-    justify-content: start;
     align-items: start;
-    padding: 0 1em;
+    grid-column: 1 / span 8;
+    grid-row: 1/2;
+    padding: 0;
     &__header {
-      font-size: 3.125rem;
+      font-size: 2.5rem;
+      text-align: left;
     }
+    &__description {
+      text-align: left;
+      
+      line-height: 150%;
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .card-header-content {
+    grid-column: 2/9;
+  }
+}
+@media (min-width: 1250px) {
+  .card-header-content {
+    grid-column: 3/9;
   }
 }
 </style>

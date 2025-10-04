@@ -32,13 +32,23 @@ const props = defineProps({
       color: $gray-600;
       font-size: $primary-size;
       text-align: center;
+      line-height: 150%;
     }
   }
 }
-@media (min-width: 768px){
-  .card-content{
-    min-width: 90%;
+@media (min-width: 768px) {
+  .card-content {
     justify-self: center;
+  }
+}
+@media (min-width: 992px) {
+  .card-content {
+    
+    align-items: start;
+    grid-row: 2/ -1;
+    &__description {
+      text-align: left;
+    }
   }
 }
 </style>

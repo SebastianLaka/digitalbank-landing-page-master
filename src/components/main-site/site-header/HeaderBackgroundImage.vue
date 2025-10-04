@@ -23,7 +23,7 @@ const props = defineProps({
 }
 @media (min-width: 992px) {
   .header-background-intro-image {
-    top: -7em;
+    top: -12em;
     left: -2em;
     min-width: 150%;
     object-fit: contain;

@@ -34,9 +34,9 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 768px){
-  .header-content{
-    &__header{
+@media (min-width: 768px) {
+  .header-content {
+    &__header {
       font-size: 2.5rem;
     }
   }
@@ -48,30 +48,31 @@ const props = defineProps({
     align-items: start;
     padding: 0 1em;
     &__header,
-    &__description{
+    &__description {
       text-align: left;
       font-size: 3.125rem;
       line-height: 150%;
-      
     }
-    &__description{
+    &__description {
       font-size: $primary-size;
     }
   }
 }
-@media (min-width: 1100px){
-  .header-content{
-    grid-column: 2/8;
+@media (min-width: 1100px) {
+  .header-content {
+    grid-column: 2/7;
+    padding: 0;
   }
 }
-@media (min-width: 1250px){
-  .header-content{
+@media (min-width: 1250px) {
+  .header-content {
     grid-column: 3/8;
   }
 }
-@media (min-width: 1440px){
-  .header-content{
-    grid-column: 3/7;
+@media (min-width: 1440px) {
+  .header-content {
+    grid-column: 3/8;
+    margin-bottom: 10em;
   }
 }
 </style>

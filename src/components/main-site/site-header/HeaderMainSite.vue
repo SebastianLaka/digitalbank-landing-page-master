@@ -32,9 +32,9 @@ const headerContentData = [
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2em 0;
-    min-height: 100svh;
-    .header-image-content{
+    
+    height: 100%;
+    .header-image-content {
       width: 100%;
     }
   }
@@ -45,16 +45,20 @@ const headerContentData = [
     grid-template-columns: repeat(14, 1fr);
     align-items: center;
     align-content: center;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     .header-image-content {
-      grid-column: 8/15;
+      grid-column: 9/17;
       z-index: 1;
       overflow-x: hidden;
     }
     .request-button {
       grid-column: 1/2;
     }
-    padding-bottom: 1em;
+  }
+}
+@media (min-width: 1250px) {
+  .header-main {
+    grid-template-columns: repeat(16, 1fr);
   }
 }
 </style>

@@ -39,7 +39,7 @@ const cardsContent = [
       'We don’t do branches. Open your account in minutes online and start taking control of your finances right away.',
   },
   {
-    id: 3,
+    id: 4,
     src: iconApi,
     alt: 'Manage your all finanses like investments, pension and much more',
     header: 'Open API',
@@ -63,6 +63,7 @@ const cardsContent = [
       :description="cardContent.description"
       :src="cardContent.src"
       :alt="cardContent.alt"
+      :class="`card-${cardContent.id}`"
     />
   </section>
 </template>
@@ -80,8 +81,68 @@ const cardsContent = [
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    align-items: center;
+    align-items: start;
     gap: 2em 4em;
+  }
+}
+@media (min-width: 992px) {
+  .cards-main {
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: auto auto;
+    gap: 4rem 2em;
+    
+    .card-1 {
+      grid-column: 1 / 4;
+      grid-row: 2;
+    }
+    .card-2 {
+      grid-column: 4 / 8;
+      grid-row: 2;
+    }
+    .card-3 {
+      grid-column: 8 /  12;
+      grid-row: 2;
+    }
+    .card-4 {
+      grid-column: 12 / 16;
+      grid-row: 2;
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .cards-main {
+    gap: 4em 1.25em;
+    padding: 0;
+    .card-1 {
+      grid-column: 2 / 5;
+    }
+    .card-2 {
+      grid-column: 5 / 8;
+    }
+    .card-3 {
+      grid-column: 8 / 11;
+    }
+    .card-4 {
+      grid-column: 11 / 14;
+    }
+  }
+}
+@media (min-width: 1250px) {
+  .cards-main {
+    grid-template-columns: repeat(16, 1fr);
+    gap: 4em 2em;
+    .card-1 {
+      grid-column: 3 / 6;
+    }
+    .card-2 {
+      grid-column: 6/ 9;
+    }
+    .card-3 {
+      grid-column: 9 / 12;
+    }
+    .card-4 {
+      grid-column: 12 / 15;
+    }
   }
 }
 </style>
