@@ -23,12 +23,7 @@ const props = defineProps({
     justify-content: center;
     align-items: center;
     gap: 1.75em 0;
-    &__header {
-      color: $blue-950;
-      font-weight: $weight-300;
-    }
     &__description {
-      color: $gray-600;
       text-align: center;
     }
   }

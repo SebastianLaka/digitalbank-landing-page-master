@@ -22,10 +22,16 @@ a {
   font-family: inherit;
   color: $gray-600;
   cursor: pointer;
+  font-size: $primary-size;
+}
+h1,h2,h3,h4,h5,h6{
+  color: $blue-950;
+  font-weight: $weight-300;
 }
 p {
   font-size: $primary-size;
   line-height: 150%;
   text-align: left;
+  color: $gray-600;
 }
 

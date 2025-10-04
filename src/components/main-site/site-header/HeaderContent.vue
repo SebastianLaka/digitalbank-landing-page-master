@@ -26,13 +26,7 @@ const props = defineProps({
     padding: 0 1em;
     gap: 1.5em 0;
     text-align: center;
-    &__header {
-      color: $blue-950;
-      font-weight: $weight-300;
-    }
-    &__description {
-      color: $gray-600;
-    }
+
   }
 }
 @media (min-width: 768px) {

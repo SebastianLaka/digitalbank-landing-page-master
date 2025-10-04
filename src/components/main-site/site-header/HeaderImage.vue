@@ -35,7 +35,7 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 1100px){
+@media (min-width: 1100px) {
   .header-site-background {
     &__image {
       min-width: 110%;
@@ -44,12 +44,12 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 1250px){
-.header-site-background {
+@media (min-width: 1250px) {
+  .header-site-background {
     &__image {
       min-width: 100%;
-     top: -7em;
-     right: -9em;
+      top: -7em;
+      right: -9em;
     }
   }
 }
