@@ -1,0 +1,41 @@
+@use '../sass/colors' as *;
+@use '../sass/fonts' as *;
+@mixin nav-highlight {
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -70%;
+    left: 0;
+    right: 0;
+    height: 0.2em;
+    opacity: 0;
+    transition:
+      background-color 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
+  }
+  &:hover::before {
+    background-color: $green-500;
+    opacity: 1;
+  }
+}
+@mixin flex-column{
+    display: flex; 
+    flex-direction: column;
+}
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+}
+@mixin flex-columns-items-center{
+    @include flex-column-center;
+    justify-content: center;
+}
+@mixin flex-row-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin image-display{
+    display: block;
+    width: 100%;
+}

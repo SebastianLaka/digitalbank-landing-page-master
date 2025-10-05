@@ -26,12 +26,10 @@ const headerContentData = [
   </header>
 </template>
 <style scoped lang="scss">
+@use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .header-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex-columns-items-center;
     height: 100%;
     .header-image-content {
       width: 100%;

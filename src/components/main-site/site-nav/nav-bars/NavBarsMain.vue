@@ -44,33 +44,26 @@ const navItems = [
 </template>
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;
-
+@use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) and (max-width: 991px) {
   .nav-bars-mobile-container {
     background: linear-gradient(
-        to bottom,
-        hsla(233, 26%, 24%, 0.5) 0%,
-        hsla(233, 26%, 30%, 0.3) 70%,
-        transparent 100%
+      to bottom,
+      hsla(233, 26%, 24%, 0.5) 0%,
+      hsla(233, 26%, 30%, 0.3) 70%,
+      transparent 100%
     );
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 5em;
+    inset: 6em 0 0 0;
+    @include flex-column-center;
     min-height: 100svh;
     padding: 2em 0;
     z-index: -10;
     backdrop-filter: blur(5px);
     .nav-bars-mobile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flex-column-center;
       padding: 2em;
-      border-radius: .4em;
+      border-radius: 0.4em;
       width: 50%;
       gap: 1.5em;
       background-color: $white;

@@ -16,12 +16,10 @@ const props = defineProps({
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;
 @use '@/assets/sass/fonts' as *;
+@use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-columns-items-center;
     gap: 1.75em 0;
     &__description {
       text-align: center;

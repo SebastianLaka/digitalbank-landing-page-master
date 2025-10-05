@@ -10,6 +10,7 @@ const props = defineProps({
 </template>
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;
+@use '@/assets/sass/mixins' as *;
 @media (min-width: 320px){
   .nav-item {
     position: relative;
@@ -20,22 +21,7 @@ const props = defineProps({
 @media (min-width: 992px) {
   .nav-item {
     color: $gray-600;
-    &::before {
-      position: absolute;
-      content: '';
-      bottom: -70%;
-      left: 0;
-      right: 0;
-      height: 0.2em;
-      opacity: 0;
-      transition:
-        background-color .5s ease-in-out,
-        opacity .5s ease-in-out;
-    }
-    &:hover::before {
-      background-color: $green-500;
-      opacity: 1;
-    }
+    @include nav-highlight;
   }
 }
 </style>

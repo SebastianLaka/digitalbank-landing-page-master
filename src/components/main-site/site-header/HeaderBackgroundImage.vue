@@ -9,15 +9,12 @@ const props = defineProps({
 </template>
 <style scoped lang="scss">
 @use '@/assets/sass/reset' as *;
+@use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .header-background-intro-image {
-    display: block;
-    width: 100%;
+    @include image-display;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    inset: 0;
     min-height: 100%;
     z-index: -1;
   }

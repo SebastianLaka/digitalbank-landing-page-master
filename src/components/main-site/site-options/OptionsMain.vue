@@ -65,10 +65,10 @@ const cardsContent = [
   </section>
 </template>
 <style scoped lang="scss">
+@use "@/assets/sass/mixins" as *;
 @media (min-width: 320px) {
   .cards-main {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 1.75em 0;
     padding: 0 1em;
   }
@@ -87,7 +87,6 @@ const cardsContent = [
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: auto auto;
     gap: 4rem 2em;
-    
     .card-1 {
       grid-column: 1 / 4;
       grid-row: 2;
@@ -115,12 +114,14 @@ const cardsContent = [
     }
     .card-2 {
       grid-column: 5 / 8;
+      
     }
     .card-3 {
       grid-column: 8 / 11;
     }
     .card-4 {
       grid-column: 11 / 14;
+     
     }
   }
 }

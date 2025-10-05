@@ -16,17 +16,17 @@ const props = defineProps({
 @use '@/assets/sass/colors' as *;
 @use '@/assets/sass/fonts' as *;
 @use '@/assets/sass/reset' as *;
+@use '@/assets/sass/mixins' as *;
 
 @media (min-width: 320px) {
   .header-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-columns-items-center;
     padding: 0 1em;
     gap: 1.5em 0;
-    text-align: center;
-
+    &__header,
+    &__description{
+      text-align: center;
+    }
   }
 }
 @media (min-width: 768px) {

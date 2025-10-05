@@ -16,12 +16,12 @@ const props = defineProps({
   </div>
 </template>
 <style scoped lang="scss">
+@use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .header-site-background {
     position: relative;
     &__image {
-      display: block;
-      width: 100%;
+      @include image-display;
     }
   }
 }

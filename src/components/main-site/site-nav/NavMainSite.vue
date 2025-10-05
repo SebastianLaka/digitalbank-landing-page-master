@@ -48,6 +48,7 @@ onUnmounted(() => {
 </template>
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;
+@use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .nav-site {
     position: fixed;
@@ -57,9 +58,7 @@ onUnmounted(() => {
     background-color: $white;
     z-index: 500;
     .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex-row-center-between;
       position: relative;
       padding: 2em 1em;
     }
@@ -85,10 +84,10 @@ onUnmounted(() => {
     }
   }
 }
-@media (min-width: 1250px){
-  .nav-site{
+@media (min-width: 1250px) {
+  .nav-site {
     grid-template-columns: repeat(16, 1fr);
-    .nav-container{
+    .nav-container {
       grid-column: 3/15;
     }
   }
