@@ -29,33 +29,31 @@ const headerContentData = [
 @use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .header-main {
-    @include flex-columns-items-center;
+    @include flex-columns-items-center(0);
     height: 100%;
     .header-image-content {
       width: 100%;
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .header-main {
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
+    @include grid-container(14);
     align-items: center;
     align-content: center;
     overflow-x: hidden;
     .header-image-content {
       grid-column: 9/17;
       z-index: 1;
-      overflow-x: hidden;
     }
     .request-button {
       grid-column: 1/2;
     }
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: $bp-desktop-xl) {
   .header-main {
-    grid-template-columns: repeat(16, 1fr);
+    @include grid-container(16);
   }
 }
 </style>

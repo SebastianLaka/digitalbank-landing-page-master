@@ -16,8 +16,7 @@ const props = defineProps({
 @use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .card-header-content {
-    @include flex-columns-items-center;
-    gap: 1.75em 0;
+    @include flex-columns-items-center(1.75em, 0);
     padding-top: 5em;
     &__header,
     &__description {
@@ -25,7 +24,7 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 768px) {
+@media (min-width: $bp-tablet) {
   .card-header-content {
     grid-column: 1/3;
     &__header {
@@ -33,7 +32,7 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .card-header-content {
     align-items: start;
     grid-column: 1 / 11;
@@ -47,12 +46,12 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: $bp-desktop-large) {
   .card-header-content {
     grid-column: 2/11;
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: $bp-desktop-xl) {
   .card-header-content {
     grid-column: 3/10;
   }

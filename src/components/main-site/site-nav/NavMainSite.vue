@@ -64,18 +64,16 @@ onUnmounted(() => {
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .nav-site {
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    gap: 0 1em;
+    @include grid-container(14, 0, 1);
     .nav-container {
       grid-column: 1/15;
       padding: 1.5em 1em;
     }
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: $bp-desktop-large) {
   .nav-site {
     gap: 0;
     .nav-container {
@@ -84,15 +82,15 @@ onUnmounted(() => {
     }
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: $bp-desktop-xl) {
   .nav-site {
-    grid-template-columns: repeat(16, 1fr);
+    @include grid-container(16, 0, 0);
     .nav-container {
       grid-column: 3/15;
     }
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: $bp-desktop-xxl) {
   .nav-site {
     .nav-container {
       grid-column: 3/15;

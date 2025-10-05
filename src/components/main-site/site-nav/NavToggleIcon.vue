@@ -12,6 +12,7 @@ const props = defineProps({
   </button>
 </template>
 <style scoped lang="scss">
+@use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .nav-button {
     background-color: transparent;
@@ -19,7 +20,7 @@ const props = defineProps({
     padding: 0.5em;
   }
 }
-@media (min-width: 992px){
+@media (min-width: $bp-desktop-medium){
     .nav-button{
         display: none;
     }

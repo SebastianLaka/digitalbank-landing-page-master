@@ -19,7 +19,7 @@ const props = defineProps({
     z-index: -1;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .header-background-intro-image {
     top: -12em;
     left: -2em;

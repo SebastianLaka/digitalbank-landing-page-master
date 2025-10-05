@@ -20,23 +20,22 @@ const props = defineProps({
 
 @media (min-width: 320px) {
   .header-content {
-    @include flex-columns-items-center;
+    @include flex-columns-items-center(1.5em, 0em);
     padding: 0 1em;
-    gap: 1.5em 0;
     &__header,
     &__description{
       text-align: center;
     }
   }
 }
-@media (min-width: 768px) {
+@media (min-width: $bp-tablet) {
   .header-content {
     &__header {
       font-size: 2.5rem;
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .header-content {
     grid-column: 1/8;
     grid-row: 1/2;
@@ -52,18 +51,18 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: $bp-desktop-large) {
   .header-content {
     grid-column: 2/7;
     padding: 0;
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: $bp-desktop-xl) {
   .header-content {
     grid-column: 3/8;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: $bp-desktop-xxl) {
   .header-content {
     grid-column: 3/8;
     margin-bottom: 10em;

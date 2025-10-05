@@ -19,19 +19,18 @@ const props = defineProps({
 @use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
   .card-content {
-    @include flex-columns-items-center;
-    gap: 1.75em 0;
+    @include flex-columns-items-center(1.75em, 0);
     &__description {
       text-align: center;
     }
   }
 }
-@media (min-width: 768px) {
+@media (min-width: $bp-tablet) {
   .card-content {
     justify-self: center;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .card-content {
     align-items: start;
     grid-row: 2/ -1;

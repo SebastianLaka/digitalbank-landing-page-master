@@ -68,25 +68,21 @@ const cardsContent = [
 @use "@/assets/sass/mixins" as *;
 @media (min-width: 320px) {
   .cards-main {
-    @include flex-column;
-    gap: 1.75em 0;
+    @include flex-column(1.75em, 0);
     padding: 0 1em;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: $bp-tablet) {
   .cards-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include grid-container(2, 2em, 4em);
     grid-template-rows: repeat(2, 1fr);
     align-items: start;
-    gap: 2em 4em;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .cards-main {
-    grid-template-columns: repeat(14, 1fr);
+    @include grid-container(14, 4em, 2em);
     grid-template-rows: auto auto;
-    gap: 4rem 2em;
     .card-1 {
       grid-column: 1 / 4;
       grid-row: 2;
@@ -105,9 +101,9 @@ const cardsContent = [
     }
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: $bp-desktop-large) {
   .cards-main {
-    gap: 4em 1.25em;
+    @include grid-container(14, 4em, 1.25em);
     padding: 0;
     .card-1 {
       grid-column: 2 / 5;
@@ -125,10 +121,9 @@ const cardsContent = [
     }
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: $bp-desktop-xl) {
   .cards-main {
-    grid-template-columns: repeat(16, 1fr);
-    gap: 4em 2em;
+    @include grid-container(16, 4em, 2em);
     .card-1 {
       grid-column: 3 / 6;
     }

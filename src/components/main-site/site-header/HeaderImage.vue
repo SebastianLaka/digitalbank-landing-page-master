@@ -25,7 +25,7 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .header-site-background {
     &__image {
       position: relative;
@@ -35,7 +35,7 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: $bp-desktop-large) {
   .header-site-background {
     &__image {
       min-width: 110%;
@@ -44,7 +44,7 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: $bp-desktop-xl) {
   .header-site-background {
     &__image {
       min-width: 100%;

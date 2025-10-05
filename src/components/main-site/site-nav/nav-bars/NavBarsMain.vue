@@ -55,17 +55,16 @@ const navItems = [
     );
     position: absolute;
     inset: 6em 0 0 0;
-    @include flex-column-center;
+    @include flex-column-center(0);
     min-height: 100svh;
     padding: 2em 0;
     z-index: -10;
     backdrop-filter: blur(5px);
     .nav-bars-mobile {
-      @include flex-column-center;
+      @include flex-column-center(1.75em);
       padding: 2em;
       border-radius: 0.4em;
       width: 50%;
-      gap: 1.5em;
       background-color: $white;
     }
   }
@@ -79,10 +78,9 @@ const navItems = [
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $bp-desktop-medium) {
   .nav-bars-desktop {
-    display: flex;
-    gap: 0 3em;
+    @include flex-base(0, 3em);
   }
 }
 </style>
