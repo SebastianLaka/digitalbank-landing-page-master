@@ -68,7 +68,7 @@ onUnmounted(() => {
   .nav-site {
     @include grid-container(14, 0, 1);
     .nav-container {
-      grid-column: 1/15;
+      @include grid-column(1, 15);
       padding: 1.5em 1em;
     }
   }
@@ -78,6 +78,7 @@ onUnmounted(() => {
     gap: 0;
     .nav-container {
       grid-column: 2/14;
+      @include grid-column(2, 14);
       padding: 1.5em 0;
     }
   }
@@ -86,14 +87,7 @@ onUnmounted(() => {
   .nav-site {
     @include grid-container(16, 0, 0);
     .nav-container {
-      grid-column: 3/15;
-    }
-  }
-}
-@media (min-width: $bp-desktop-xxl) {
-  .nav-site {
-    .nav-container {
-      grid-column: 3/15;
+      @include grid-column(3, 15);
     }
   }
 }

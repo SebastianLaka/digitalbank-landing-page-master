@@ -56,7 +56,7 @@
   width: 100%;
 }
 
-$bp-tablet: 768px;
+$bp-tablet: 48em;
 $bp-desktop-medium: 62em;
 $bp-desktop-large: 68.75em;
 $bp-desktop-xl: 78.125em;
@@ -66,4 +66,7 @@ $bp-desktop-xxl: 90em;
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
   gap: $gap-row $gap-col;
+}
+@mixin grid-column($column-start, $column-end){
+  grid-column: #{$column-start} / #{$column-end};
 }

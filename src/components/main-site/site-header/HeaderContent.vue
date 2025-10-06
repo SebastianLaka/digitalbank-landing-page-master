@@ -37,7 +37,7 @@ const props = defineProps({
 }
 @media (min-width: $bp-desktop-medium) {
   .header-content {
-    grid-column: 1/8;
+    @include grid-column(1, 8);
     grid-row: 1/2;
     align-items: start;
     padding: 0 1em;
@@ -53,18 +53,17 @@ const props = defineProps({
 }
 @media (min-width: $bp-desktop-large) {
   .header-content {
-    grid-column: 2/7;
+    @include grid-column(2, 7);
     padding: 0;
   }
 }
 @media (min-width: $bp-desktop-xl) {
   .header-content {
-    grid-column: 3/8;
+    @include grid-column(3, 8);
   }
 }
 @media (min-width: $bp-desktop-xxl) {
   .header-content {
-    grid-column: 3/8;
     margin-bottom: 10em;
   }
 }

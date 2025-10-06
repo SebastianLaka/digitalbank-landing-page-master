@@ -75,7 +75,6 @@ const cardsContent = [
 @media (min-width: $bp-tablet) {
   .cards-main {
     @include grid-container(2, 2em, 4em);
-    grid-template-rows: repeat(2, 1fr);
     align-items: start;
   }
 }
@@ -84,20 +83,16 @@ const cardsContent = [
     @include grid-container(14, 4em, 2em);
     grid-template-rows: auto auto;
     .card-1 {
-      grid-column: 1 / 4;
-      grid-row: 2;
+      @include grid-column(1, 4); 
     }
     .card-2 {
-      grid-column: 4 / 8;
-      grid-row: 2;
+      @include grid-column(4, 8);
     }
     .card-3 {
-      grid-column: 8 /  12;
-      grid-row: 2;
+      @include grid-column(8, 12);
     }
     .card-4 {
-      grid-column: 12 / 16;
-      grid-row: 2;
+      @include grid-column(12, 15); 
     }
   }
 }
@@ -106,17 +101,16 @@ const cardsContent = [
     @include grid-container(14, 4em, 1.25em);
     padding: 0;
     .card-1 {
-      grid-column: 2 / 5;
+      @include grid-column(2, 5);
     }
     .card-2 {
-      grid-column: 5 / 8;
-      
+      @include grid-column(5, 8);
     }
     .card-3 {
-      grid-column: 8 / 11;
+      @include grid-column(8, 11);
     }
     .card-4 {
-      grid-column: 11 / 14;
+      @include grid-column(11, 14);
      
     }
   }
@@ -126,15 +120,17 @@ const cardsContent = [
     @include grid-container(16, 4em, 2em);
     .card-1 {
       grid-column: 3 / 6;
+      @include grid-column(3, 6);
     }
     .card-2 {
       grid-column: 6/ 9;
+      @include grid-column(6, 9);
     }
     .card-3 {
-      grid-column: 9 / 12;
+      @include grid-column(9, 12);
     }
     .card-4 {
-      grid-column: 12 / 15;
+      @include grid-column(12, 15);
     }
   }
 }

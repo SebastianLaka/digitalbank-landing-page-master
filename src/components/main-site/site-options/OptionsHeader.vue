@@ -26,7 +26,7 @@ const props = defineProps({
 }
 @media (min-width: $bp-tablet) {
   .card-header-content {
-    grid-column: 1/3;
+    @include grid-column(1, 3);
     &__header {
       font-size: 2.5rem;
     }
@@ -35,7 +35,7 @@ const props = defineProps({
 @media (min-width: $bp-desktop-medium) {
   .card-header-content {
     align-items: start;
-    grid-column: 1 / 11;
+    @include grid-column(1, 11);
     grid-row: 1/2;
     padding: 0;
     &__header {
@@ -48,12 +48,12 @@ const props = defineProps({
 }
 @media (min-width: $bp-desktop-large) {
   .card-header-content {
-    grid-column: 2/11;
+    @include grid-column(2, 11);
   }
 }
 @media (min-width: $bp-desktop-xl) {
   .card-header-content {
-    grid-column: 3/10;
+    @include grid-column(3, 10);
   }
 }
 </style>

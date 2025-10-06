@@ -43,11 +43,11 @@ const headerContentData = [
     align-content: center;
     overflow-x: hidden;
     .header-image-content {
-      grid-column: 9/17;
+      @include grid-column(9, 17);
       z-index: 1;
     }
     .request-button {
-      grid-column: 1/2;
+      @include grid-column(1, 2);
     }
   }
 }
