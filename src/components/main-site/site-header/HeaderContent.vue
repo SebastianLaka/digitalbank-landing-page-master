@@ -64,6 +64,7 @@ const props = defineProps({
 }
 @media (min-width: $bp-desktop-xxl) {
   .header-content {
+  @include grid-column(3, 7);
     margin-bottom: 10em;
   }
 }
