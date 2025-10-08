@@ -38,7 +38,6 @@ const props = defineProps({
 @media (min-width: $bp-desktop-medium) {
   .card-header-content {
     align-items: start;
-    @include grid-column(1, 11);
     grid-row: 1/2;
     padding: 0;
     &__header {

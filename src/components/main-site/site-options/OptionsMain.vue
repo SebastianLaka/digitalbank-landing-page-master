@@ -78,24 +78,6 @@ const cardsContent = [
     align-items: start;
   }
 }
-@media (min-width: $bp-desktop-medium) {
-  .cards-main {
-    @include grid-container(14, 4em, 2em);
-    grid-template-rows: auto auto;
-    .card-1 {
-      @include grid-column(1, 4); 
-    }
-    .card-2 {
-      @include grid-column(4, 8);
-    }
-    .card-3 {
-      @include grid-column(8, 12);
-    }
-    .card-4 {
-      @include grid-column(12, 15); 
-    }
-  }
-}
 @media (min-width: $bp-desktop-large) {
   .cards-main {
     @include grid-container(14, 4em, 1.25em);

@@ -33,7 +33,7 @@ const props = defineProps({
 @media (min-width: $bp-desktop-medium) {
   .card-content {
     align-items: start;
-    grid-row: 2/ -1;
+
     &__description {
       text-align: left;
     }

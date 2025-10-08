@@ -9,13 +9,13 @@
     font-size: 2.5rem;
     color: $blue-950;
     text-align: center;
-    @include grid-column(1, 3);
+    @include grid-column(1,3);
   }
 }
 @media (min-width: $bp-desktop-medium) {
   .articles-header {
     grid-row: 1/2;
-    @include grid-column(1, 6);
+    @include grid-column(1, 3);
     text-align: start;
   }
 }

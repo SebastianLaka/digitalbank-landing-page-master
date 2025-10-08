@@ -48,6 +48,7 @@ const props = defineProps({
 }
 @media (min-width: $bp-desktop-medium){
     .article-card {
+        
         &__image{
             height: 25svh;
         }

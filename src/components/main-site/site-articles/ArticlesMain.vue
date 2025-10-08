@@ -63,36 +63,52 @@ const articlesCardData = [
 <style scoped lang="scss">
 @use '@/assets/sass/mixins' as *;
 @media (min-width: 320px) {
-  .articles-container{
+  .articles-container {
     @include flex-column(1.75em, 0);
     align-items: start;
     padding-top: 8em;
   }
 }
-
-@media (min-width: $bp-tablet){
-  .articles-container{
-     @include grid-container(2, 2em, 4em);
-    
+@media (min-width: $bp-tablet) {
+  .articles-container {
+    @include grid-container(2, 2em, 4em);
   }
 }
-
-@media (min-width: $bp-desktop-medium) {
+@media (min-width: $bp-desktop-large) {
   .articles-container {
-    @include grid-container(12, 4em, 2em);
-    grid-template-rows: auto auto;
-    padding: 8em 1em 0 1em;
+    @include grid-container(14, 4em, 1.25em);
+    padding: 0;
     .card-1 {
-      @include grid-column(1, 4); 
+      @include grid-column(2, 5);
     }
     .card-2 {
-      @include grid-column(4, 7);
+      @include grid-column(5, 8);
     }
     .card-3 {
-      @include grid-column(7, 10);
+      @include grid-column(8, 11);
     }
     .card-4 {
-      @include grid-column(10, 13); 
+      @include grid-column(11, 14);
+     
+    }
+  }
+}
+@media (min-width: $bp-desktop-xl) {
+  .articles-container {
+    @include grid-container(16, 4em, 2em);
+    .card-1 {
+      grid-column: 3 / 6;
+      @include grid-column(3, 6);
+    }
+    .card-2 {
+      grid-column: 6/ 9;
+      @include grid-column(6, 9);
+    }
+    .card-3 {
+      @include grid-column(9, 12);
+    }
+    .card-4 {
+      @include grid-column(12, 15);
     }
   }
 }
