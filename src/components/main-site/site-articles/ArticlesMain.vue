@@ -56,6 +56,7 @@ const articlesCardData = [
       :signature="articleCard.signature"
       :header="articleCard.header"
       :description="articleCard.description"
+      :class="`card-${articleCard.id}`"
     />
   </section>
 </template>
@@ -68,9 +69,31 @@ const articlesCardData = [
     padding-top: 8em;
   }
 }
-@media (min-width: $bp-tablet) {
+
+@media (min-width: $bp-tablet){
+  .articles-container{
+     @include grid-container(2, 2em, 4em);
+    
+  }
+}
+
+@media (min-width: $bp-desktop-medium) {
   .articles-container {
-    @include grid-container(2, 3em, 3em);
+    @include grid-container(12, 4em, 2em);
+    grid-template-rows: auto auto;
+    padding: 8em 1em 0 1em;
+    .card-1 {
+      @include grid-column(1, 4); 
+    }
+    .card-2 {
+      @include grid-column(4, 7);
+    }
+    .card-3 {
+      @include grid-column(7, 10);
+    }
+    .card-4 {
+      @include grid-column(10, 13); 
+    }
   }
 }
 </style>

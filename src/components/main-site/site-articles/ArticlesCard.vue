@@ -20,20 +20,37 @@ const props = defineProps({
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;
 @use '@/assets/sass/mixins' as *;
+@use '@/assets/sass/fonts' as *;
 
 @media (min-width: 320px) {
   .article-card {
     @include flex-columns-items-center(1.75em, 0);
-
     &__image {
       width: 100%;
       height: 40svh;
-    object-fit: cover;
+      object-fit: cover;
+      border-top-left-radius: .4em;
+      border-top-right-radius: .4em;
     }
     .article-card-content {
-      @include flex-columns-items-center(1.75em, 0);
-      padding: 0 2em;
+      @include flex-column(1.75em, 0);
+      padding: 0 1.25em;
+      &__signature {
+        font-size: 0.875rem;
+      }
+      &__header,
+      &__description {
+        font-size: 1rem;
+        font-weight: $weight-400;
+      }
     }
   }
+}
+@media (min-width: $bp-desktop-medium){
+    .article-card {
+        &__image{
+            height: 25svh;
+        }
+    }
 }
 </style>

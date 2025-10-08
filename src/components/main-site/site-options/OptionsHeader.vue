@@ -18,6 +18,9 @@ const props = defineProps({
   .card-header-content {
     @include flex-columns-items-center(1.75em, 0);
     padding-top: 5em;
+    &__header{
+      font-weight: $weight-400;
+    }
     &__header,
     &__description {
       text-align: center;
