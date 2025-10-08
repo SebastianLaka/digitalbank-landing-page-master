@@ -8,6 +8,7 @@
   .articles-header {
     font-size: 2.5rem;
     color: $blue-950;
+    text-align: center;
   }
 }
 </style>
