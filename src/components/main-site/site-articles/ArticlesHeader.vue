@@ -9,6 +9,8 @@
     font-size: 2.5rem;
     color: $blue-950;
     text-align: center;
+    padding-bottom: 1em;
+    @include grid-column(1, 3)
   }
 }
 </style>

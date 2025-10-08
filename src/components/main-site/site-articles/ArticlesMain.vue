@@ -64,7 +64,13 @@ const articlesCardData = [
 @media (min-width: 320px) {
   .articles-container{
     @include flex-column(1.75em, 0);
+    align-items: start;
     padding-top: 8em;
+  }
+}
+@media (min-width: $bp-tablet) {
+  .articles-container {
+    @include grid-container(2, 3em, 3em);
   }
 }
 </style>

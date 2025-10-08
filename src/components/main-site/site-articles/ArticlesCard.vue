@@ -24,13 +24,15 @@ const props = defineProps({
 @media (min-width: 320px) {
   .article-card {
     @include flex-columns-items-center(1.75em, 0);
+
     &__image {
-      @include image-display;
+      width: 100%;
+      height: 40svh;
+    object-fit: cover;
     }
     .article-card-content {
-    @include flex-column(1.75em, 0);
-    padding: 0 2em;
-      
+      @include flex-columns-items-center(1.75em, 0);
+      padding: 0 2em;
     }
   }
 }
