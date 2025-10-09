@@ -41,7 +41,21 @@ const socialMediaIcons = [
 ]
 </script>
 <template>
-  <FooterLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
-  <FooterMedia v-for="socialMediaIcon in socialMediaIcons" :key="socialMediaIcon.id" :src="socialMediaIcon.icon" :alt="socialMediaIcon.alt"/>
+  
+  <div class="footer-media-container">
+    <FooterLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
+    <div class="footer-media">
+        <FooterMedia v-for="socialMediaIcon in socialMediaIcons" :key="socialMediaIcon.id" :src="socialMediaIcon.icon" :alt="socialMediaIcon.alt"/>
+    </div>
+    
+  </div>
+  
 </template>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@use '@/assets/sass/mixins' as *;
+@media (min-width: 320px){
+    .footer-media-container{
+        @include flex-columns-items-center(1em);
+    }
+}
+</style>

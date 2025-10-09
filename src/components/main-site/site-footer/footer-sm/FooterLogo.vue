@@ -6,7 +6,7 @@ const props = defineProps({
 
 </script>
 <template>
-    <img :src="props.src" :alt="props.alt">
+    <img :src="props.src" :alt="props.alt" class="footer-logo">
 </template>
 <style scoped lang="scss">
 </style>
