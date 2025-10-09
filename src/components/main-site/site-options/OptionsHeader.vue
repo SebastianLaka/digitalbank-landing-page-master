@@ -39,7 +39,7 @@ const props = defineProps({
   .card-header-content {
     align-items: start;
     grid-row: 1/2;
-    padding: 0;
+    padding: 0 0 2em 0;
     &__header {
       font-size: 2.5rem;
     }

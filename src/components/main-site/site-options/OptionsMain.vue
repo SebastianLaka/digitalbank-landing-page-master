@@ -80,20 +80,24 @@ const cardsContent = [
 }
 @media (min-width: $bp-desktop-large) {
   .cards-main {
-    @include grid-container(14, 4em, 1.25em);
+    @include grid-container(14, 2em, 4em);
+    grid-template-rows: auto auto;
     padding: 0;
-    .card-1 {
-      @include grid-column(2, 5);
+    .card-1{
+      @include grid-column(2, 8);
+      grid-row: 2/2;
     }
-    .card-2 {
-      @include grid-column(5, 8);
+    .card-2{
+      @include grid-column(8, 14);
+      grid-row: 2/2;
     }
-    .card-3 {
-      @include grid-column(8, 11);
+    .card-3{
+      @include grid-column(2,8);
+      grid-row: 3/3;
     }
-    .card-4 {
-      @include grid-column(11, 14);
-     
+    .card-4{
+      @include grid-column(8, 14);
+      grid-row: 3/3;
     }
   }
 }
@@ -101,18 +105,18 @@ const cardsContent = [
   .cards-main {
     @include grid-container(16, 4em, 2em);
     .card-1 {
-      grid-column: 3 / 6;
       @include grid-column(3, 6);
     }
     .card-2 {
-      grid-column: 6/ 9;
       @include grid-column(6, 9);
     }
     .card-3 {
       @include grid-column(9, 12);
+      grid-row: 2/2;
     }
     .card-4 {
       @include grid-column(12, 15);
+      grid-row: 2/2;
     }
   }
 }

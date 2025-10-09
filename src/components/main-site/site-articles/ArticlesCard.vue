@@ -29,8 +29,8 @@ const props = defineProps({
       width: 100%;
       height: 40svh;
       object-fit: cover;
-      border-top-left-radius: .4em;
-      border-top-right-radius: .4em;
+      border-top-left-radius: 0.4em;
+      border-top-right-radius: 0.4em;
     }
     .article-card-content {
       @include flex-column(1.75em, 0);
@@ -46,12 +46,11 @@ const props = defineProps({
     }
   }
 }
-@media (min-width: $bp-desktop-medium){
-    .article-card {
-        
-        &__image{
-            height: 25svh;
-        }
+@media (min-width: $bp-desktop-medium) {
+  .article-card {
+    &__image {
+      height: 25svh;
     }
+  }
 }
 </style>
