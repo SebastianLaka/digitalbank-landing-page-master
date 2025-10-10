@@ -46,6 +46,15 @@
   @include flex-column-center($row-gap, $col-gap);
   justify-content: center;
 }
+@mixin flex-columns-items-between($row-gap: null, $col-gap: null) {
+  @include flex-column-center($row-gap, $col-gap);
+  justify-content: space-between;
+}
+@mixin flex-columns-items-end($row-gap: null, $col-gap: null) {
+  @include flex-column-center($row-gap, $col-gap);
+  justify-content: space-between;
+  align-items: end;
+}
 @mixin flex-row-center-between($row-gap: null, $col-gap: null) {
   @include flex-base($row-gap, $col-gap);
   justify-content: space-between;

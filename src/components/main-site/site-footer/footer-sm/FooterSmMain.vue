@@ -55,7 +55,15 @@ const socialMediaIcons = [
 @use '@/assets/sass/mixins' as *;
 @media (min-width: 320px){
     .footer-media-container{
-        @include flex-columns-items-center(1em);
+        @include flex-columns-items-center(3em, 0);
+        .footer-media{
+          @include flex-base(0, 1em)
+        }
     }
+}
+@media (min-width: $bp-tablet){
+    .footer-media-container {
+    @include flex-columns-items-between(2em, 0);
+  }
 }
 </style>

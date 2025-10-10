@@ -13,8 +13,12 @@ import FooterReserved from './FooterReserved.vue'
 
 @media (min-width: 320px) {
   .footer-rights {
-    @include flex-columns-items-center(1em);
-
+    @include flex-columns-items-center(3em, 0);
+  }
+}
+@media (min-width: $bp-tablet){
+    .footer-rights {
+    @include flex-columns-items-end(2.5em, 0);
   }
 }
 </style>

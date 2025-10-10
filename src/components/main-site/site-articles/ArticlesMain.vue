@@ -66,7 +66,7 @@ const articlesCardData = [
   .articles-container {
     @include flex-column(1.75em, 0);
     align-items: start;
-    padding-top: 8em;
+    padding: 8em 0;
   }
 }
 @media (min-width: $bp-tablet) {
@@ -78,7 +78,7 @@ const articlesCardData = [
   .articles-container {
     @include grid-container(14, 2em, 4em);
     grid-template-rows: auto auto;
-    padding: 0;
+    padding: 4em 0;
     .card-1 {
       @include grid-column(2, 8);
       grid-row: 2/2;
