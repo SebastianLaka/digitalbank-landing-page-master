@@ -19,6 +19,7 @@ const props = defineProps({
     @include flex-columns-items-center(1.75em, 0);
     padding-top: 5em;
     &__header{
+      font-size: 2.5rem;
       font-weight: $weight-400;
     }
     &__header,
@@ -40,9 +41,6 @@ const props = defineProps({
     align-items: start;
     grid-row: 1/2;
     padding: 0 0 2em 0;
-    &__header {
-      font-size: 2.5rem;
-    }
     &__description {
       text-align: left;
     }

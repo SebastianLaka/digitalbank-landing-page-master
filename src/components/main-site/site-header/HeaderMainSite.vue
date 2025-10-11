@@ -30,7 +30,6 @@ const headerContentData = [
 @media (min-width: 320px) {
   .header-main {
     @include flex-columns-items-center(0);
-    height: 100%;
     .header-image-content {
       width: 100%;
     }

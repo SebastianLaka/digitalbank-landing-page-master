@@ -100,19 +100,22 @@ const articlesCardData = [
 @media (min-width: $bp-desktop-xl) {
   .articles-container {
     @include grid-container(16, 4em, 2em);
+    grid-template-rows: 0 0;
     .card-1 {
       @include grid-column(3, 6);
+      grid-row: 3/3;
     }
     .card-2 {
       @include grid-column(6, 9);
+      grid-row: 3/3;
     }
     .card-3 {
       @include grid-column(9, 12);
-      grid-row: 2/2;
+      
     }
     .card-4 {
       @include grid-column(12, 15);
-      grid-row: 2/2;
+      
     }
   }
 }

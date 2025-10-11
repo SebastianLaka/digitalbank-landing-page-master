@@ -20,7 +20,6 @@ const props = defineProps({
 }
 @media (min-width: $bp-desktop-medium) {
   .nav-item {
-    color: $gray-600;
     @include nav-highlight;
   }
 }

@@ -1,8 +1,10 @@
 $blue-950: hsl(233, 26%, 24%);
 $green-500: hsl(136, 64%, 51%);
+$green-300: hsl(136, 100%, 50%);
 $cyan-400: hsl(192, 69%, 51%);
 $gray-600: hsl(233, 8%, 62%);
 $gray-100: hsl(220, 16%, 96%);
 $gray-50: hsl(0, 0%, 98%);
 $white: hsl(0, 100%, 100%);
 $gradient: linear-gradient((25deg,),$cyan-400 ,$green-500);
+$hover-gradient: linear-gradient((25deg,), $green-300 ,$cyan-400);

@@ -16,9 +16,19 @@ import FooterReserved from './FooterReserved.vue'
     @include flex-columns-items-center(3em, 0);
   }
 }
-@media (min-width: $bp-tablet){
-    .footer-rights {
+@media (min-width: $bp-desktop-medium) {
+  .footer-rights {
     @include flex-columns-items-end(2.5em, 0);
+  }
+}
+@media (min-width: $bp-desktop-large) {
+  .footer-rights {
+    grid-column: 10/14;
+  }
+}
+@media (min-width: $bp-desktop-xl){
+  .footer-rights {
+    grid-column: 10/14;
   }
 }
 </style>

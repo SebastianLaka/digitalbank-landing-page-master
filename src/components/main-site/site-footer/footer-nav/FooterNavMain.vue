@@ -40,10 +40,22 @@ const footerItems = [
     @include flex-columns-items-center(2em);
   }
 }
-@media (min-width: $bp-tablet){
+@media (min-width: $bp-desktop-medium){
     .footer-nav-container {
     @include grid-container(2, 2em , .5em);
     align-items: center;
+  }
+}
+@media (min-width: $bp-desktop-large){
+  .footer-nav-container{
+    @include grid-container(2, 2em , .5em);
+    align-items: center;
+    grid-column: 6/10;
+  }
+}
+@media (min-width: $bp-desktop-xl){
+  .footer-nav-container{
+    grid-column: 6/10;
   }
 }
 </style>

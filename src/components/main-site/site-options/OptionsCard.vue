@@ -20,6 +20,9 @@ const props = defineProps({
 @media (min-width: 320px) {
   .card-content {
     @include flex-columns-items-center(1.75em, 0);
+    &__header{
+      font-size: 1.5rem;
+    }
     &__description {
       text-align: center;
     }

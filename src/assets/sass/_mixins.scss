@@ -4,7 +4,7 @@
   &::before {
     position: absolute;
     content: '';
-    bottom: -70%;
+    bottom: -55%;
     left: 0;
     right: 0;
     height: 0.2em;
@@ -68,7 +68,7 @@
 $bp-tablet: 48em;
 $bp-desktop-medium: 62em;
 $bp-desktop-large: 68.75em;
-$bp-desktop-xl: 78.125em;
+$bp-desktop-xl: 81.25em;
 $bp-desktop-xxl: 90em;
 
 @mixin grid-container($columns, $gap-row: 0, $gap-col: 0) {

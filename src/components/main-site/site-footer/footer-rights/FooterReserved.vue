@@ -7,7 +7,7 @@
 @media (min-width: 320px){
     .footer-description-paragraph{
         color: $gray-600;
-        font-size: 1rem;
+        font-size: .875rem;
     }
 }
 </style>

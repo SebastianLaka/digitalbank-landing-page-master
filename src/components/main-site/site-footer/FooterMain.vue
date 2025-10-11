@@ -20,10 +20,21 @@ import FooterNavMain from './footer-nav/FooterNavMain.vue';
     padding: 3em 1em;
   }
 }
-@media (min-width: $bp-tablet){
+@media (min-width: $bp-desktop-medium){
   .footer-container {
     @include grid-container(3, 2em, 2em);
     align-items: stretch;
+  }
+}
+@media (min-width: $bp-desktop-large){
+  .footer-container{
+    @include grid-container(14, 2em, 4em);
+  
+  }
+}
+@media (min-width: $bp-desktop-xl){
+  .footer-container{
+    @include grid-container(15, 4em, 2em);
   }
 }
 </style>

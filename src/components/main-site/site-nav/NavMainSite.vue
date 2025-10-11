@@ -60,7 +60,7 @@ onUnmounted(() => {
     .nav-container {
       @include flex-row-center-between;
       position: relative;
-      padding: 2em 1em;
+      padding: 1.5em 1em;
     }
   }
 }
@@ -69,15 +69,12 @@ onUnmounted(() => {
     @include grid-container(14, 0, 1);
     .nav-container {
       @include grid-column(1, 15);
-      padding: 1.5em 1em;
     }
   }
 }
 @media (min-width: $bp-desktop-large) {
   .nav-site {
-    gap: 0;
     .nav-container {
-      grid-column: 2/14;
       @include grid-column(2, 14);
       padding: 1.5em 0;
     }

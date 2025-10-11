@@ -27,6 +27,7 @@
 @media (min-width: $bp-desktop-xl) {
   .articles-header {
     @include grid-column(3, 10);
+    padding: 1em 0 3em 0;
   }
 }
 </style>

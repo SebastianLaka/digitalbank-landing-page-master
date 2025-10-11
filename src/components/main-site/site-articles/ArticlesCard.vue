@@ -38,10 +38,16 @@ const props = defineProps({
       &__signature {
         font-size: 0.875rem;
       }
+      &__header{
+        cursor: pointer;
+        transition: color .5s ease-in-out;
+        &:hover{
+          color: $green-500;
+        }
+      }
       &__header,
       &__description {
-        font-size: 1rem;
-        font-weight: $weight-400;
+        font-size: $primary-size;
       }
     }
   }

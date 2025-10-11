@@ -41,15 +41,12 @@ const socialMediaIcons = [
 ]
 </script>
 <template>
-  
   <div class="footer-media-container">
     <FooterLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
     <div class="footer-media">
         <FooterMedia v-for="socialMediaIcon in socialMediaIcons" :key="socialMediaIcon.id" :src="socialMediaIcon.icon" :alt="socialMediaIcon.alt"/>
-    </div>
-    
+    </div> 
   </div>
-  
 </template>
 <style scoped lang="scss">
 @use '@/assets/sass/mixins' as *;
@@ -61,9 +58,20 @@ const socialMediaIcons = [
         }
     }
 }
-@media (min-width: $bp-tablet){
+@media (min-width: $bp-desktop-medium){
     .footer-media-container {
-    @include flex-columns-items-between(2em, 0);
+    @include flex-columns-items-end(2.5em, 0);
+    align-items: flex-start;
+  }
+}
+@media (min-width: $bp-desktop-large){
+  .footer-media-container{
+    grid-column: 2/4;
+  }
+}
+@media (min-width: $bp-desktop-xl){
+.footer-media-container{
+    grid-column: 3/4;
   }
 }
 </style>

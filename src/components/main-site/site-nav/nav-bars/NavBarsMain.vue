@@ -59,7 +59,7 @@ const navItems = [
     min-height: 100svh;
     padding: 2em 0;
     z-index: -10;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(.5em);
     .nav-bars-mobile {
       @include flex-column-center(1.75em);
       padding: 2em;

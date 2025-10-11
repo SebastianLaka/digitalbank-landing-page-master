@@ -8,5 +8,3 @@ const props = defineProps({
 <template>
     <img :src="props.src" :alt="props.alt">
 </template>
-<style scoped lang="scss">
-</style>

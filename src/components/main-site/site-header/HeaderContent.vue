@@ -21,33 +21,22 @@ const props = defineProps({
 @media (min-width: 320px) {
   .header-content {
     @include flex-columns-items-center(1.5em, 0em);
-    padding: 0 1em;
+    padding: 2em 1em;
     &__header,
-    &__description{
+    &__description {
       text-align: center;
     }
   }
 }
-@media (min-width: $bp-tablet) {
-  .header-content {
-    &__header {
-      font-size: 2.5rem;
-    }
-  }
-}
+
 @media (min-width: $bp-desktop-medium) {
   .header-content {
     @include grid-column(1, 8);
     grid-row: 1/2;
     align-items: start;
-    padding: 0 1em;
     &__header,
     &__description {
       text-align: left;
-      font-size: 3.125rem;
-    }
-    &__description {
-      font-size: $primary-size;
     }
   }
 }
@@ -64,7 +53,7 @@ const props = defineProps({
 }
 @media (min-width: $bp-desktop-xxl) {
   .header-content {
-  @include grid-column(3, 7);
+    @include grid-column(3, 7);
     margin-bottom: 10em;
   }
 }
