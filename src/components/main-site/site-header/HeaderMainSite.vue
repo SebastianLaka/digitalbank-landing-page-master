@@ -3,6 +3,7 @@ import HeaderContent from './HeaderContent.vue'
 import HeaderImage from './HeaderImage.vue'
 import ImageMockups from '@/assets/images/image-mockups.png'
 
+const headerContentAlt = 'Mockup image to full header content'
 const headerContentData = [
   {
     id: 1,
@@ -15,7 +16,7 @@ const headerContentData = [
 <template>
   <header class="header-main">
     <div class="header-image-content">
-      <HeaderImage :src="ImageMockups" />
+      <HeaderImage :src="ImageMockups" :alt="headerContentAlt"/>
     </div>
     <HeaderContent
       v-for="headerContent in headerContentData"

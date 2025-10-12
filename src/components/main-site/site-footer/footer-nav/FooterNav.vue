@@ -4,9 +4,11 @@ const props = defineProps({
 })
 </script>
 <template>
-  <li>
-    <a href="#" class="footer-item">{{ props.item }}</a>
-  </li>
+  <ul>
+    <li>
+      <a href="#" class="footer-item">{{ props.item }}</a>
+    </li>
+  </ul>
 </template>
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;
@@ -21,5 +23,4 @@ const props = defineProps({
     }
   }
 }
-
 </style>

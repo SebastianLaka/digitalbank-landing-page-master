@@ -38,9 +38,9 @@ const navItems = [
       </ul>
     </div>
   </Transition>
-  <ul class="nav-bars-desktop" v-if="!store.isMobileWidth">
+  <div class="nav-bars-desktop" v-if="!store.isMobileWidth">
     <NavBarsItems v-for="navItem in navItems" :key="navItem.id" :item="navItem.item" />
-  </ul>
+  </div>
 </template>
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;

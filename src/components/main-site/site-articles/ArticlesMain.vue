@@ -71,12 +71,12 @@ const articlesCardData = [
 }
 @media (min-width: $bp-tablet) {
   .articles-container {
-    @include grid-container(2, 2em, 4em);
+    @include grid-container(2, 4em, 4em);
   }
 }
 @media (min-width: $bp-desktop-large) {
   .articles-container {
-    @include grid-container(14, 2em, 4em);
+    @include grid-container(14, 4em, 4em);
     grid-template-rows: auto auto;
     padding: 4em 0;
     .card-1 {
@@ -99,7 +99,7 @@ const articlesCardData = [
 }
 @media (min-width: $bp-desktop-xl) {
   .articles-container {
-    @include grid-container(16, 4em, 2em);
+    @include grid-container(16, 4em, 3em);
     grid-template-rows: 0 0;
     .card-1 {
       @include grid-column(3, 6);

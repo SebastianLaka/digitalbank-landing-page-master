@@ -4,14 +4,16 @@ const props = defineProps({
 })
 </script>
 <template>
-  <li>
-    <a href="#" class="nav-item">{{ props.item }}</a>
-  </li>
+  <ul>
+    <li>
+      <a href="#" class="nav-item">{{ props.item }}</a>
+    </li>
+  </ul>
 </template>
 <style scoped lang="scss">
 @use '@/assets/sass/colors' as *;
 @use '@/assets/sass/mixins' as *;
-@media (min-width: 320px){
+@media (min-width: 320px) {
   .nav-item {
     position: relative;
     color: $blue-950;

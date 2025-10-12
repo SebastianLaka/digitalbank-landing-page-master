@@ -74,13 +74,13 @@ const cardsContent = [
 }
 @media (min-width: $bp-tablet) {
   .cards-main {
-    @include grid-container(2, 2em, 4em);
+    @include grid-container(2, 4em);
     align-items: start;
   }
 }
 @media (min-width: $bp-desktop-large) {
   .cards-main {
-    @include grid-container(14, 2em, 4em);
+    @include grid-container(14, 4em, 4em);
     grid-template-rows: auto auto;
     padding: 0;
     .card-1{
@@ -103,7 +103,7 @@ const cardsContent = [
 }
 @media (min-width: $bp-desktop-xl) {
   .cards-main {
-    @include grid-container(16, 4em, 2em);
+    @include grid-container(16, 4em, 6em);
     .card-1 {
       @include grid-column(3, 6);
     }
