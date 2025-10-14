@@ -33,7 +33,7 @@ onUnmounted(() => {
 })
 </script>
 <template>
-  <nav class="nav-site">
+  <nav class="nav-site" role="navigation">
     <div class="nav-container">
       <NavLogo :src="logoAttrs.logo" :alt="logoAttrs.alt" />
       <NavBarsMain />

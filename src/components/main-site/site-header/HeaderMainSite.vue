@@ -14,7 +14,7 @@ const headerContentData = [
 ]
 </script>
 <template>
-  <header class="header-main">
+  <header class="header-main" role="banner">
     <div class="header-image-content">
       <HeaderImage :src="ImageMockups" :alt="headerContentAlt"/>
     </div>

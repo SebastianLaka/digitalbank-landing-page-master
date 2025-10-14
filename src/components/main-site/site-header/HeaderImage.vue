@@ -8,12 +8,12 @@ const props = defineProps({
   src: String,
   alt: String,
 })
-const backgroundImageAttr = 'Special image for header visual';
+
 </script>
 <template>
   <div class="header-site-background">
     <img :src="props.src" :alt="props.alt" class="header-site-background__image" />
-    <HeaderBackgroundImage :src="store.isMobileWidth ? bgIntroMobile : bgIntroDesktop" :alt="backgroundImageAttr"/>
+    <HeaderBackgroundImage :src="store.isMobileWidth ? bgIntroMobile : bgIntroDesktop"/>
   </div>
 </template>
 <style scoped lang="scss">

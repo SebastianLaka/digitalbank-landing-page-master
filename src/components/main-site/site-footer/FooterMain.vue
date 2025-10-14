@@ -4,7 +4,7 @@ import FooterRightsMain from './footer-rights/FooterRightsMain.vue'
 import FooterNavMain from './footer-nav/FooterNavMain.vue';
 </script>
 <template>
-  <footer class="footer-container">
+  <footer class="footer-container" role="contentinfo">
     <FooterSmMain />
     <FooterNavMain />
     <FooterRightsMain />
