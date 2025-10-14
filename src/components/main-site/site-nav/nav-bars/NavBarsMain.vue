@@ -54,7 +54,7 @@ const navItems = [
       transparent 100%
     );
     position: absolute;
-    inset: 6em 0 0 0;
+    inset: 5em 0 0 0;
     @include flex-column-center(0);
     min-height: 100svh;
     padding: 2em 0;
