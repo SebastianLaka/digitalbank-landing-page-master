@@ -74,7 +74,7 @@ const cardsContent = [
 }
 @media (min-width: $bp-tablet) {
   .cards-main {
-    @include grid-container(2, 4em);
+    @include grid-container(2, 4em, 4em);
     align-items: start;
   }
 }
